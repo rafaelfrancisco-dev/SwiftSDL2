@@ -13,7 +13,10 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/drmidnight/CSDL2.git", from: "0.0.11"),
+		.package(
+			url: "https://github.com/rafaelfrancisco-dev/CSDL2.git",
+			.branch("master")
+		)
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
