@@ -10,21 +10,31 @@ let package = Package(
         .library(
             name: "SwiftSDL2",
             targets: ["SwiftSDL2"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-		.package(
-			url: "https://github.com/rafaelfrancisco-dev/CSDL2.git",
-			.branch("master")
-		)
+        .library(
+            name: "CSDL2",
+            targets: ["CSDL2"])
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
+        .systemLibrary(
+            name: "CSDL2",
+            pkgConfig: "sdl2",
+            providers: [
+                .brew([
+                    "sdl2",
+                    "sdl2_image",
+                    "sdl2_ttf"
+                ]),
+                .apt(["libsdl2-dev",
+                      "libsdl2-image-dev",
+                      "libsdl2-ttf-dev"
+                ])
+            ]),
         .target(
             name: "SwiftSDL2",
             dependencies: ["CSDL2"]
         )
     ]
-  
+    
 )
