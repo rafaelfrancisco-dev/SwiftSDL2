@@ -93,3 +93,19 @@ func bridgeRetained<T : AnyObject>(obj : T) -> UnsafeRawPointer {
 func bridgeTransfer<T : AnyObject>(ptr : UnsafeRawPointer) -> T {
     return Unmanaged<T>.fromOpaque(ptr).takeRetainedValue()
 }
+
+#if os(Linux)
+public typealias GlobalInt = Int32
+#elseif os(Windows)
+public typealias GlobalInt = UInt32
+#else
+public typealias GlobalInt = Int32
+#endif
+
+#if os(Linux)
+public typealias GlobalIntReversed = UInt32
+#elseif os(Windows)
+public typealias GlobalIntReversed = Int32
+#else
+public typealias GlobalIntReversed = UInt32
+#endif

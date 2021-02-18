@@ -1,6 +1,6 @@
 import CSDL2
 
-public enum BlendMode: UInt32 {
+public enum BlendMode: GlobalIntReversed {
     case none     = 0x00000000  /** SDL_BLENDMODE_NONE < no blending dstRGBA = srcRGBA */
     case blend    = 0x00000001  /** SDL_BLENDMODE_BLEND < alpha blending dstRGB = (srcRGB * srcA) + (dstRGB * (1-srcA)) dstA = srcA + (dstA * (1-srcA)) */
     case add      = 0x00000002  /** SDL_BLENDMODE_ADD < additive blending dstRGB = (srcRGB * srcA) + dstRGB dstA = dstA */
@@ -31,7 +31,7 @@ public enum BlendOperation: UInt8 {
 
 public extension BlendOperation {
     var sdlValue: SDL_BlendOperation {
-        return SDL_BlendOperation(rawValue: UInt32(self.rawValue))
+        return SDL_BlendOperation(rawValue: GlobalIntReversed(self.rawValue))
     }
 }
 
@@ -52,6 +52,6 @@ public enum BlendFactor: UInt8
 
 public extension BlendFactor {
     var sdlValue: SDL_BlendFactor {
-        return SDL_BlendFactor(rawValue: UInt32(self.rawValue))
+        return SDL_BlendFactor(rawValue: GlobalIntReversed(self.rawValue))
     }
 }
