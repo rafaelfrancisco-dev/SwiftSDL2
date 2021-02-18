@@ -109,3 +109,12 @@ public typealias GlobalIntReversed = Int32
 #else
 public typealias GlobalIntReversed = UInt32
 #endif
+
+
+#if os(Linux)
+public typealias FontInt = Int32
+#elseif os(windows)
+public typealias FontInt = Int32
+#else
+public typealias FontInt = Int
+#endif
