@@ -26,7 +26,7 @@ public struct KeyCode: OptionSet {
     public static let ampersand   = KeyCode(rawValue: Int(SDLK_AMPERSAND.rawValue))
     public static let singleQuote = KeyCode(rawValue: Int(SDLK_QUOTE.rawValue))
     public static let leftParen   = KeyCode(rawValue: Int(SDLK_LEFTPAREN.rawValue))
-    public static let rightParen  = KeyCode(rawValue: Int(SDLK_RIGHTPAREN.rawValue)
+    public static let rightParen  = KeyCode(rawValue: Int(SDLK_RIGHTPAREN.rawValue))
     public static let asterix     = KeyCode(rawValue: Int(SDLK_ASTERISK.rawValue))
     public static let plus        = KeyCode(rawValue: Int(SDLK_PLUS.rawValue))
     public static let comma       = KeyCode(rawValue: Int(SDLK_COMMA.rawValue))

@@ -108,7 +108,7 @@ public extension SDL {
 
     static func setHint(hint: String, value: Int, priority: HintPriority) {
         var valPtr = Int8(value)
-        SDL_SetHintWithPriority(hint, &valPtr, SDL_HintPriority(rawValue:priority.rawValue))
+        SDL_SetHintWithPriority(hint, &valPtr, SDL_HintPriority(rawValue: GlobalIntReversed(priority.rawValue)))
     }
 
     static func getHint(hint: String) -> Int8 {

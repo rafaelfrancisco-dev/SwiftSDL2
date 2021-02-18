@@ -7,6 +7,6 @@ public enum RendererFlip: UInt32 {
 
 public extension RendererFlip {
     var sdlValue: SDL_RendererFlip {
-        return SDL_RendererFlip(rawValue: UInt32(self.rawValue))
+        return SDL_RendererFlip(rawValue: GlobalIntReversed(self.rawValue))
     }
 }

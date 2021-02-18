@@ -163,7 +163,7 @@ public class Cursor {
     }
 
     init(systemType: SystemCursor) {
-        self._cursorPtr = SDL_CreateSystemCursor(SDL_SystemCursor(rawValue: systemType.rawValue))
+        self._cursorPtr = SDL_CreateSystemCursor(SDL_SystemCursor(rawValue: GlobalIntReversed(systemType.rawValue)))
     }
 
     /** 

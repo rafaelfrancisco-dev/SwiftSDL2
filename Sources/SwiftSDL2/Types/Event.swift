@@ -86,7 +86,7 @@ public extension Event {
     }
 
     func isModDown(_ keyMod: KeyMod) -> Bool {
-        let modStates = KeyMod(rawValue: SDL_GetModState().rawValue)
+        let modStates = KeyMod(rawValue: GlobalInt(SDL_GetModState().rawValue))
         return modStates.contains(keyMod)
     }
 

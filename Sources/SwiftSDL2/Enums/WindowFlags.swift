@@ -7,8 +7,8 @@ public struct WindowFlags: OptionSet {
     }
 
     public static let fullscreen        = WindowFlags(rawValue: GlobalInt(SDL_WINDOW_FULLSCREEN.rawValue))  /**< fullscreen window */
-    public static let openGL            = WindowFlags(rawValue: GlobalInt(SDL_WINDOW_OPENGL.rawValue)))  /**< window usable with OpenGL context */
-    public static let hidden            = WindowFlags(rawValue: GlobalInt(SDL_WINDOW_HIDDEN.rawValue) )  /**< window is not visible */
+    public static let openGL            = WindowFlags(rawValue: GlobalInt(SDL_WINDOW_OPENGL.rawValue))  /**< window usable with OpenGL context */
+    public static let hidden            = WindowFlags(rawValue: GlobalInt(SDL_WINDOW_HIDDEN.rawValue))  /**< window is not visible */
     public static let shown             = WindowFlags(rawValue: GlobalInt(SDL_WINDOW_SHOWN.rawValue))  /**< window is visible */
     public static let borderless        = WindowFlags(rawValue: GlobalInt(SDL_WINDOW_BORDERLESS.rawValue))  /**< no window decoration */
     public static let resizeable        = WindowFlags(rawValue: GlobalInt(SDL_WINDOW_RESIZABLE.rawValue))  /**< window can be resized */
